@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">Weather App</h1>
+    <p>enter a city name below to get the current weather and the 5 days forecast for that city!</p>
+  </header>
+
+
+  <main class="flex-row justify-space-between">
+    <div>
+      <input type="text" class="location" placeholder="Enter a city">
+      <input type="submit" value="submit" class="submit">  
+    </div>
+
+    <div class="display">
+      <h1 class="locationName">test</h1>
+      <p class="desc">placeholder</p>
+      <p class="temp">100</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
