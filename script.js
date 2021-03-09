@@ -1,7 +1,7 @@
 var sumbitBtn = document.querySelector('.submit');
 var cityValue = document.querySelector('.location');
 var cityName = document.querySelector('.locationName');
-var weatherDesc = document.querySelector('.desc');
+var weatherDesc = document.querySelector('.weatherType');
 var weatherTemp = document.querySelector('.temp');
 var fiveDay = document.querySelector('.fiveday');
 var latitude = 0;
@@ -15,6 +15,7 @@ sumbitBtn.addEventListener('click', function(){
       console.log(data);
       var nameValue = data['name'];
       var temp = data['main']['temp'];
+      
       var descValue = data['weather'][0]['description'];
       var lat = data['coord']['lat'];
       var lon = data['coord']['lon'];

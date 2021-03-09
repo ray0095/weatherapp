@@ -1,3 +1,31 @@
+:root {
+    --headerColor: black;
+    --headerText: white;
+    --cardColor: #EDEDED;
+    --bodyBackground:#C6C6C6;
+}
+
 body {
     text-align: center;
+    background-color: var(--bodyBackground);
+}
+
+header {
+    padding: 3rem;
+    background-color: var(--headerColor);
+    color: var(--headerText);
+}
+
+main {
+    margin-top: 1.5rem;
+}
+
+.row {
+    margin-bottom: 1.5rem;
+}
+
+/**Current weather styling**/
+
+.card {
+    background-color: var(--cardColor);
 }
