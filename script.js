@@ -13,6 +13,7 @@ $(".date").text(currentDay.format("dddd, MMM Do"));
 
 
 sumbitBtn.addEventListener('click', function(){
+
   fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityValue.value+'&units=imperial&appid=0606d3b9cff69b3d73e7e260cab5ca3b')
     .then(response => response.json())
     .then(data => {
@@ -70,7 +71,7 @@ sumbitBtn.addEventListener('click', function(){
 
               var newCard = document.createElement('div');
               console.log(newCard)
-              newCard.classList.add("card");
+              newCard.classList.add("card-five");
               newCard.classList.add("card-body");
 
               var dailyDateEl = document.createElement('h5');
@@ -79,15 +80,24 @@ sumbitBtn.addEventListener('click', function(){
 
               var dailyDescripEl = document.createElement('p');
               dailyDescripEl.innerHTML = dailyDescrip;
+              console.log(dailyDescripEl)
               newCard.appendChild(dailyDescripEl);
 
               var dailyTempEl = document.createElement('p');
-              dailyDescripEl.innerHTML = dailyTempPrint;
+              dailyTempEl.innerHTML = dailyTempPrint;
               newCard.appendChild(dailyTempEl);
 
               var dailyUVEl = document.createElement('p');
               dailyUVEl.innerHTML = 'UV Index: '+dailyUV;
               newCard.appendChild(dailyUVEl);
+
+              if (dailyUVParsed < 3){//NEEDS WORK
+                dailyUVEl.classList.add("goodUV") 
+              } else if (dailyUVParsed < 6){
+                dailyUVEl.classList.add("OKUV") 
+              } else {
+                dailyUVEl.classList.add("badUV")
+              };
 
               fiveDay.appendChild(newCard);
 
@@ -95,3 +105,4 @@ sumbitBtn.addEventListener('click', function(){
         })
     })
 })
+
