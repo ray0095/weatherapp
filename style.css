@@ -24,8 +24,37 @@ main {
     margin-bottom: 1.5rem;
 }
 
+.submit{
+    width: 100%;
+    color: white;
+    background-color: black;
+    border-radius: 15%
+}
+
+.location{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem
+}
+
 /**Current weather styling**/
 
 .card {
     background-color: var(--cardColor);
+}
+
+p{
+    font-weight: bold;
+}
+.goodUV {
+    color: green;
+}
+
+.OKUV {
+    color: gold;
+}
+
+.badUV{
+    color: red;
 }
